@@ -1,0 +1,12 @@
+from anticla.agent.subagent.subagents import delegate_research, delegate_review
+from anticla.tools.file_ops import list_files, read_file, write_file
+from anticla.tools.terminal import execute_bash
+
+ide_tools = [
+    read_file,
+    write_file,
+    list_files,
+    execute_bash,
+    delegate_research,
+    delegate_review,
+]

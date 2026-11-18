@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anticla"
+version = "0.1.0"
+description = "Agentic Coding CLI"
+dependencies = [
+    "typer>=0.15.0",
+    "prompt-toolkit>=3.0.0",
+    "rich>=13.9.0",
+    "langgraph>=1.2.22",
+    "langchain-core>=0.3.40",
+    "langchain-nvidia-ai-endpoints>=1.5.0",
+    "langchain-ollama>=0.2.0",
+    "pydantic-settings>=2.8.0",
+    "python-dotenv>=1.0.1"
+]
+
+[project.scripts]
+anticla = "anticla.cli.app:cli_app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["anticla*"]
